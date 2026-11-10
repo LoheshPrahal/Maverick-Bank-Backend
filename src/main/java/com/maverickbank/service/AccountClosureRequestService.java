@@ -71,7 +71,6 @@ public class AccountClosureRequestService {
         request.setProcessedBy(employee);
         accountClosureRequestRepository.save(request);
 
-        // Log: the employee has approved the closure request
         log.info("Closure request {} approved by employee {}", requestId, name);
     }
 
@@ -83,7 +82,6 @@ public class AccountClosureRequestService {
         request.setProcessedBy(employee);
         accountClosureRequestRepository.save(request);
 
-        // Log: the employee has rejected the closure request
         log.info("Closure request {} rejected by employee {}", requestId, employeeUsername);
     }
 
